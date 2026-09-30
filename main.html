@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cute+Font&display=swap" rel="stylesheet">
+    <style>
+        /* CSS로 폰트 적용 */
+        *{
+            margin: 10px auto;
+            text-align: center;
+        }
+        body, textarea{
+            font-family: 'Cute Font', sans-serif;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+        .bold-text {
+            font-weight: 700; /* 두꺼운 글씨 */
+        }
+        .card{
+            display: flex;
+            justify-content: space-around;
+        }
+        img{
+            width: 300px;
+            display: block;
+            border-radius: 20px;
+        }
+        p{
+            font-size: 2rem;
+        }
+        textarea {
+            /* 모서리 둥글게 지정 (px, rem, % 등 사용 가능) */
+            border-radius: 12px;
+            
+            /* 깔끔하게 보이기 위한 권장 기본 스타일 */
+            border: 1px solid #ccc; /* 테두리 모서리가 잘 보이도록 설정 */
+            padding: 12px;          /* 텍스트가 테두리에 바짝 붙지 않도록 여백 추가 */
+            outline: none;          /* 포커스 시 생기는 기본 테두리 라인 스타일 지정 준비 */
+        }
+        #btn{
+            width: 200px;
+            height: 50px;
+            background-color: palevioletred;
+            border-radius: 50px;
+            
+        }
+        #btn:hover{
+            background-color: cornflowerblue;
+        }
+        #btn:active{
+            background-color: darkblue;
+        }
+        a{
+            text-decoration: none;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1>소중한 이에게 못다한 말을 전하세요.</h1>
+    </div>
+    <div>
+        <p>카드를 선택하세요</p>
+        <div class="card">
+            <input type="radio" name="card" value="love"><img src="img/love.png">
+            <input type="radio" name="card" value="sorry"><img src="img/sorry.png">
+            <input type="radio" name="card" value="thanks"><img src="img/thanks.png">
+        </div>
+    </div>
+    <hr>
+    <div>
+        <p>남기고 싶은 말을 적으세요.</p>
+    </div>
+    <div id="msg">
+        <textarea cols="100" rows="5" placeholder="여기에 남길 말을 적으세요..."></textarea>
+    </div>
+    <div id="btn">
+        <h2><a href="result.html">전하기</a></h2>
+    </div>
+</body>
+</html>
